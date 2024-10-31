@@ -73,7 +73,7 @@ export function Select(props: SelectProps) {
               icon={icon}
               className={twMerge(
                 ' w-4 h-4',
-                isOpen ? 'text-black' : 'text-[#717171]',
+                isOpen ? 'text-gray-500' : 'text-[#717171]',
               )}
             />
           </div>
@@ -91,7 +91,7 @@ export function Select(props: SelectProps) {
             icon={faChevronDown}
             className={twMerge(
               'w-4 h-4',
-              isOpen ? 'text-primary-20' : 'text-gray-700',
+              isOpen ? 'text-primary-20' : 'text-gray-500',
             )}
           />
         ) : (
@@ -101,7 +101,7 @@ export function Select(props: SelectProps) {
               icon={icon}
               className={twMerge(
                 'w-4 h-4',
-                isOpen ? 'text-primary-20' : 'text-gray-700',
+                isOpen ? 'text-primary-20' : 'text-gray-500',
               )}
             />
           )

@@ -25,7 +25,7 @@ export function Input(props: InputProps) {
   }
 
   return (
-    <div className="flex items-center text-base box-border border-[1px] shadow-input border-gray-200 rounded-lg px-4 py-1 placeholder:text-neutral-900 hover:border-primary-20 hover:!text-primary-20 bg-white">
+    <div className="flex relative items-center text-base box-border border-[1px] shadow-input border-gray-200 rounded-lg px-4 py-1 placeholder:text-neutral-900 hover:border-primary-20 hover:!text-primary-20 bg-white">
       <input
         className="text-neutral-800 w-full focus:outline-none"
         {...props}
@@ -35,7 +35,7 @@ export function Input(props: InputProps) {
       {props.icon && (
         <FontAwesomeIcon
           icon={props.icon}
-          className="w-4 h-4 text-neutral-500"
+          className="w-4 h-4 text-neutral-500 absolute right-4"
           onClick={props.iconClick}
         />
       )}

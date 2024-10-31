@@ -30,7 +30,7 @@ export function BottomSheet(props: BottomSheetProps) {
       )}
       <div
         className={twMerge(
-          "transition-transform duration-500 ease-out w-full bg-white shadow-lg px-4 py-4 rounded-t-2xl",
+          "transition-transform duration-500 overflow-auto ease-out w-full bg-white shadow-lg px-4 py-4 rounded-t-2xl",
           open && loaded
             ? "transform: translate-y-0"
             : "transform: translate-y-[100%]"

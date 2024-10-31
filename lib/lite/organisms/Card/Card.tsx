@@ -1,6 +1,8 @@
+import { twMerge } from "tailwind-merge";
 import { Button } from "../../atoms/Button"
 
 export interface CardProps {
+  className?: string;
   image: string
   name: string
   price: string
@@ -13,14 +15,12 @@ export interface CardProps {
 }
 
 export function Card(props: CardProps) {
-  const { image, name, price, address, btnText, withCta, isDisabled, onClick, onBuy } =
+  const { image, name, price, address, btnText, withCta, isDisabled, className, onClick, onBuy } =
     props
-
-  console.log(image)
 
   return (
     <div
-      className="flex flex-col rounded-[10px] relative min-w-[170px] max-w-[220px]  cursor-pointer pb-4"
+      className={twMerge("flex flex-col rounded-[10px] relative min-w-[170px] max-w-[220px]  cursor-pointer pb-4", className)}
       style={{ boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 6px 0px' }}
     >
       <div className="relative w-full h-[180px]" onClick={onClick} style={{ height: '180px' }}>
