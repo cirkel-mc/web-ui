@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronDown,
-  IconDefinition,
 } from '@fortawesome/free-solid-svg-icons'
 import { twMerge } from 'tailwind-merge'
 import { useOutsideClick } from '@/lib/@hooks/useOutsideClick'
@@ -16,7 +15,7 @@ export interface SelectProps {
   classes?: string;
   containerClass?: string;
   optionClass?: string;
-  icon?: IconDefinition
+  icon?: any
   options: SelectItem[]
   placeholder?: string
   iconPosition?: 'left' | 'right'
