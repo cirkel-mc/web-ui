@@ -2,7 +2,7 @@
   "name": "cirkel-web-ui",
   "description": "UIKit for Cirkel Web",
   "private": false,
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.umd.js",
