@@ -3,12 +3,13 @@
 import React, { useState } from 'react'
 import type { InputHTMLAttributes } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+// import type { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { twMerge } from 'tailwind-merge'
 // import { InputProps } from './types'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  icon?: IconDefinition
+  icon?: typeof faSearch
   isClock?: boolean
   iconClick?: () => void
   onChange: (e: any) => void
