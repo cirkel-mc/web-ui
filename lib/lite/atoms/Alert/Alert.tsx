@@ -9,10 +9,11 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 interface AlertProps extends PropsWithChildren {
   variant: 'success' | 'error'
+  isActive: boolean
 }
 
-export const Alert = ({ variant, children }: AlertProps) => {
-  const [active, setActive] = useState(false)
+export const Alert = ({ isActive, variant, children }: AlertProps) => {
+  const [active, setActive] = useState(isActive)
 
   const getVariant = () => {
     switch (variant) {
@@ -47,7 +48,7 @@ export const Alert = ({ variant, children }: AlertProps) => {
   return (
     <div
       className={twMerge(
-        ' transition-all w-[80%] duration-500 fixed -top-[999px] left-1/2 -translate-x-1/2 flex items-center gap-4 px-4 py-2 shadow-2xl bg-white text-white rounded z-50',
+        ' transition-all w-fit duration-500 fixed -top-[9999px] left-1/2 -translate-x-1/2 flex items-center gap-4 px-4 py-2 shadow-2xl bg-white text-white rounded z-50',
         getVariant(),
         active && 'top-[20px]',
       )}
