@@ -1,1 +1,1 @@
-export { BottomSheet } from './BottomSheet'
+export { BottomSheet, type BottomSheetProps } from './BottomSheet'

@@ -12,7 +12,7 @@ export { Radio } from './lite/atoms/Radio'
 export { Switch } from './lite/atoms/Switch';
 
 // Molecules
-export { BottomSheet } from './lite/molecules/BottomSheet'
+export * from './lite/molecules/BottomSheet'
 export * from './lite/molecules/Select'
 export * from './lite/molecules/Tabs'
 // Organisms

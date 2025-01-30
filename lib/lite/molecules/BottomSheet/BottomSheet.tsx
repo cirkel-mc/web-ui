@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-interface BottomSheetProps {
+export interface BottomSheetProps {
   open: boolean;
   children: any
   title: string;

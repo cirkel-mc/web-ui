@@ -37,6 +37,7 @@ export default defineConfig({
         formats: {
           webp: { quality: 50 },
           jpg: { quality: 70 },
+          png: { quality: 70 },
         },
       }),
     }),
