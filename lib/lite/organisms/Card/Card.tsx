@@ -8,15 +8,16 @@ export interface CardProps {
   name: string
   price: string
   city: string
-  address: string
+  partner: string
   rating?: number
   onClick: () => void
   total_transaction: number
   total_review: number
+  venue_type: string
 }
 
 export function Card(props: CardProps) {
-  const { image, name, price, address, rating, city, className, total_review, total_transaction, onClick } =
+  const { image, name, price, partner, rating, city, className, total_review, total_transaction, venue_type, onClick } =
     props
 
 
@@ -41,13 +42,14 @@ export function Card(props: CardProps) {
         <p className="text-lg font-semibold text-ellipsis overflow-hidden !leading-6 line-clamp-2">
           {name}
         </p>
-        <p className="text-primary-30 font-medium my-1">{price}</p>
-        <p className='text-gray-400 text-sm overflow-hidden text-ellipsis leading-5 my-1 line-clamp-2'>{address}</p>
+        <p className="text-sm text-neutral-400">{venue_type}</p>
+        <p className="text-primary-30 font-semibold my-1">{price}</p>
+        <p className='text-gray-700 font-semibold text-sm overflow-hidden text-ellipsis leading-5 mb-1 line-clamp-2'>{partner}</p>
         <div className=" flex items-center gap-1">
           <FontAwesomeIcon className="w-4 h-4 text-yellow-500" icon={faStar} />
           <span className="text-neutral-400 text-sm inline-block">{rating}</span>
           <span className="bg-neutral-400 h-1 w-1 rounded-full inline-block mx-1" />
-          <span className="text-neutral-400 text-sm inline-block mb-[2px]">{total_review} reviews</span>
+          <span className="text-neutral-400 text-sm inline-block">{total_review} reviews</span>
         </div>
         <p className="mt-1 text-sm text-neutral-500">{total_transaction} bookings</p>
       </div>
